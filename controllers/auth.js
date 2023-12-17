@@ -1,14 +1,14 @@
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
-const { JWT_SECRET_KEY } = require("../../constants/env");
-const { User } = require("../../users/models/user");
-const HttpError = require("../../helpers/HttpError");
+const { JWT_SECRET_KEY } = require("../constants/env");
+const { User } = require("../users/models/user");
+const HttpError = require("../helpers/HttpError");
 const gravatar = require("gravatar");
 const path = require("path");
 const fs = require("fs/promises");
 const Jimp = require("jimp");
 
-const avatarsDir = path.join(__dirname, "../", "../", "public", "avatars");
+const avatarsDir = path.join(__dirname, "../", "public", "avatars");
 
 const register = async (req, res, next) => {
   const { email, password } = req.body;
@@ -28,7 +28,7 @@ const register = async (req, res, next) => {
 
   const user = {
     email: newUser.email,
-    password: newUser.password,
+    // password: newUser.password,
     subscription: newUser.subscription,
     avatarURL: newUser.avatarURL,
   };
@@ -54,7 +54,7 @@ const login = async (req, res, next) => {
 
   const user = {
     email: registeredUser.email,
-    password: registeredUser.password,
+    // password: registeredUser.password,
     subscription: registeredUser.subscription,
   };
 
