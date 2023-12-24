@@ -1,7 +1,7 @@
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const { JWT_SECRET_KEY, BASE_URL } = require("../constants/env");
-const { User } = require("../users/models/user");
+const { User } = require("../models/user");
 const HttpError = require("../helpers/HttpError");
 const gravatar = require("gravatar");
 const path = require("path");
