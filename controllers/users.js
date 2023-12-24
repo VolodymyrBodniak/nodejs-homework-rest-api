@@ -7,4 +7,6 @@ module.exports = {
   getCurrent: ctrlWrapper(auth.getCurrent),
   logout: ctrlWrapper(auth.logout),
   updateAvatar: ctrlWrapper(auth.updateAvatar),
+  verifyEmail: ctrlWrapper(auth.verifyEmail),
+  resendVerifiedEmail: ctrlWrapper(auth.resendVerifiedEmail),
 };
